@@ -1,48 +1,105 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Telemetricos Tv</title>
+    <meta charset="UTF-8">
+    <title>Telemetricos Tv - F1 Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background-color: #e10600; /* Rojo F1 */
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(225, 6, 0, 0.3);
+        }
+        .header h1 a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .post {
+            background-color: #2d2d2d;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid #e10600;
+        }
+        .post h2 {
+            color: #e10600;
+            margin-top: 0;
+        }
+        .date {
+            font-size: 0.8em;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        .content {
+            line-height: 1.6;
+        }
+        .highlight {
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: square;
+        }
+    </style>
 </head>
 <body>
-<div>
-<h1><a href="/">REPORTE F1: CIERRE TEMPORADA 2025 Y NUEVA ERA 2026</a></h1>
-</div>
-<div>
-    <div>
-<h1><a href="/">Blog del profe Jorge</a></h1>
-</div>
-{% for publicacion in publicaciones %}
 
-<div>
-<p> publicado: {{ publicacion.fecha_publicacion }}</p>
-<h2><a href="">{{ publicacion.titulo }}</a></h2>
-<p>{{ publicacion.texto|linebreaksbr }}</p>
-<hr>
-</div>
-{% endfor %}
+    <div class="container">
+        <div class="header">
+            <h1><a href="/">REPORTE F1: CIERRE TEMPORADA 2025 Y NUEVA ERA 2026</a></h1>
+        </div>
 
-<div>
-<p>Fecha de publicación: 13/02/2026</p>
-<h2><a href="">2. RESUMEN DE LOS NUEVOS AUTOS 2026 (REVOLUCION TECNICA)</a></h2>
-<p>* DISEÑO "NIMBLE CAR" (AUTO AGIL):
-  - Los autos son 10cm mas estrechos y 20cm mas cortos.
-  - Reduccion de peso de 30kg para mejorar la maniobrabilidad.
-  - Neumaticos mas angostos para reducir el arrastre (drag).
+        <div class="post">
+            <p class="date">Fecha de publicación: 14/02/2026</p>
+            <h2>1. EL PASE DEL SIGLO: HAMILTON A FERRARI</h2>
+            <div class="content">
+                <p>Lewis Hamilton deja Mercedes tras más de una década para buscar su octavo título vestido de rojo.</p>
+                <ul>
+                    <li><span class="highlight">Dupla explosiva:</span> Compartirá equipo con Charles Leclerc en la escudería de Maranello.</li>
+                </ul>
+            </div>
+        </div>
 
-* AERODINAMICA ACTIVA (ADIO AL DRS TRADICIONAL):
-  - Alerones moviles delanteros y traseros.
-  - Modo Z: Maxima carga para paso por curva.
-  - Modo X: Minima resistencia para velocidad en recta.
-  - Sistema "Manual Override": Potencia electrica extra para rebases.
+        <div class="post">
+            <p class="date">Fecha de publicación: 14/02/2026</p>
+            <h2>2. RESUMEN DE LOS NUEVOS AUTOS 2026 (REVOLUCION TECNICA)</h2>
+            <div class="content">
+                <p>El concepto <span class="highlight">"NIMBLE CAR"</span> (Auto Ágil) redefine la categoría:</p>
+                <ul>
+                    <li>Los autos son 10cm más estrechos y 20cm más cortos.</li>
+                    <li>Reducción de peso de 30kg para mejorar la maniobrabilidad.</li>
+                    <li>Neumáticos más angostos para reducir el arrastre (drag).</li>
+                </ul>
+                <p><strong>AERODINÁMICA ACTIVA:</strong> Alerones móviles delanteros y traseros para mayor carga en curvas.</p>
+            </div>
+        </div>
 
-* NUEVAS UNIDADES DE POTENCIA (50% GASOLINA / 50% ELECTRICO):
-  - Motores de combustion interna (V6 Turbo) mas simples.
-  - Eliminacion del MGU-H (recuperador de calor).
-  - El motor electrico (MGU-K) triplica su potencia (de 120kW a 350kW).
-  - Combustibles 100% sostenibles/sinteticos.
+        <div class="post">
+            <p class="date">Fecha de publicación: 14/02/2026</p>
+            <h2>3. EL FACTOR ARGENTINO: FRANCO COLAPINTO</h2>
+            <div class="content">
+                <p>La <span class="highlight">Colapintomanía</span> sigue a tope. El piloto argentino es la gran esperanza para mantener la bandera celeste y blanca en la grilla tras sus tremendas actuaciones.</p>
+            </div>
+        </div>
 
-* NUEVOS INTEGRANTES:
-  - Ingreso oficial de AUDI como equipo de fabrica (compra de Sauber).
-  - Alianza FORD - RED BULL POWERTRAINS entra en funcionamiento.</p>
-</div>
+        <hr>
+        <p style="text-align: center; color: #666;">Blog del profe Jorge - Editado por Lucca</p>
+    </div>
+
 </body>
 </html>
