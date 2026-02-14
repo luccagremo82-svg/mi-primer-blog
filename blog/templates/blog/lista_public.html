@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Telemetricos Tv</title>
+</head>
+<body>
+<div>
+<h1><a href="/">REPORTE F1: CIERRE TEMPORADA 2025 Y NUEVA ERA 2026</a></h1>
+</div>
+<div>
+    <div>
+<h1><a href="/">Blog del profe Jorge</a></h1>
+</div>
+{% for publicacion in publicaciones %}
+
+<div>
+<p> publicado: {{ publicacion.fecha_publicacion }}</p>
+<h2><a href="">{{ publicacion.titulo }}</a></h2>
+<p>{{ publicacion.texto|linebreaksbr }}</p>
+<hr>
+</div>
+{% endfor %}
+
+<div>
+<p>Fecha de publicación: 13/02/2026</p>
+<h2><a href="">2. RESUMEN DE LOS NUEVOS AUTOS 2026 (REVOLUCION TECNICA)</a></h2>
+<p>* DISEÑO "NIMBLE CAR" (AUTO AGIL):
+  - Los autos son 10cm mas estrechos y 20cm mas cortos.
+  - Reduccion de peso de 30kg para mejorar la maniobrabilidad.
+  - Neumaticos mas angostos para reducir el arrastre (drag).
+
+* AERODINAMICA ACTIVA (ADIO AL DRS TRADICIONAL):
+  - Alerones moviles delanteros y traseros.
+  - Modo Z: Maxima carga para paso por curva.
+  - Modo X: Minima resistencia para velocidad en recta.
+  - Sistema "Manual Override": Potencia electrica extra para rebases.
+
+* NUEVAS UNIDADES DE POTENCIA (50% GASOLINA / 50% ELECTRICO):
+  - Motores de combustion interna (V6 Turbo) mas simples.
+  - Eliminacion del MGU-H (recuperador de calor).
+  - El motor electrico (MGU-K) triplica su potencia (de 120kW a 350kW).
+  - Combustibles 100% sostenibles/sinteticos.
+
+* NUEVOS INTEGRANTES:
+  - Ingreso oficial de AUDI como equipo de fabrica (compra de Sauber).
+  - Alianza FORD - RED BULL POWERTRAINS entra en funcionamiento.</p>
+</div>
+</body>
+</html>
