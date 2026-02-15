@@ -17,9 +17,12 @@
                 <div class="col-md-8">
                     {% for publicacion in publicaciones %}
                         <div class="post">
-                            <p class="date">publicado: {{ publicacion.fecha_publicacion }}</p>
+                            <div class="date">
+                                <p>publicado: {{ publicacion.fecha_publicacion }}</p>
+                            </div>
                             <h2><a href="">{{ publicacion.titulo }}</a></h2>
                             <p>{{ publicacion.texto|linebreaksbr }}</p>
+                            <hr>
                         </div>
                     {% endfor %}
                 </div>
