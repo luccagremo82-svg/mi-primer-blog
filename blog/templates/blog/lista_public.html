@@ -1,26 +1,30 @@
 <body>{% load static %}
 <html>
 <head>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <title>Telemetricos Tv - F1 Report</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
-<div>
+<div class="page-header">
 <h1><a href="/">REPORTE F1: CIERRE TEMPORADA 2025 Y NUEVA ERA 2026</a></h1>
 </div>
-<div>
-<p>publicado: 14.02.2026, 12:14</p>
-<h2><a href="">1. EL PASE DEL SIGLO: HAMILTON A FERRARI</a></h2>
-
-<p>El mundo de la Formula 1 esta viviendo una transformacion radical con el movimiento mas importante de la decada. 
-Lewis Hamilton deja Mercedes tras mas de diez años de gloria para buscar su octavo titulo mundial vestido de rojo Ferrari. 
-Esta noticia no solo sacude el ambito deportivo, sino tambien el mercado comercial, donde las acciones de la escuderia italiana 
-se dispararon tras el anuncio. La dupla Hamilton-Leclerc promete ser una de las mas explosivas de la historia, 
-planteando un desafio directo al dominio de Red Bull y Max Verstappen. Los expertos predicen que para el inicio de 2026, 
-con el cambio de reglamento, Ferrari podria volver a la cima del podio de forma definitiva. Mientras tanto, Mercedes busca 
-desesperadamente un reemplazo a la altura, invirtiendo millones en el desarrollo de su nuevo monoplaza para no perder terreno.</p>
-
+<div class="content container">
+<div class="row">
+<div class="col-md-8">
+{% for publicacion in publicaciones %}
+<div class="post">
+<div class="date">
+<p> publicado: {{ publicacion.fecha_publicacion }}</p>
+</div>
+<h2><a href="">{{ publicacion.titulo }}</a></h2>
+<p>{{ publicacion.texto|linebreaksbr }}</p>
+<hr>
+</div>
+{% endfor %}
+</div>
+</div>
 </div>
 <div>
 <p>publicado: 15.02.2026, 09:22</p>
