@@ -1,41 +1,29 @@
-<body>{% load static %}
+{% load static %}
 <html>
-<head>
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <title>Telemetricos Tv - F1 Report</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-<div class="page-header">
-<h1><a href="/">REPORTE F1: CIERRE TEMPORADA 2025 Y NUEVA ERA 2026</a></h1>
-</div>
-<div class="content container">
-<div class="row">
-<div class="col-md-8">
-{% for publicacion in publicaciones %}
-<div class="post">
-<div class="date">
-<p> publicado: {{ publicacion.fecha_publicacion }}</p>
-</div>
-<h2><a href="">{{ publicacion.titulo }}</a></h2>
-<p>{{ publicacion.texto|linebreaksbr }}</p>
-<hr>
-</div>
-{% endfor %}
-</div>
-</div>
-</div>
-<div>
-<p>publicado: 15.02.2026, 09:22</p>
-<h2><a href="">2. RESUMEN DE LOS NUEVOS AUTOS 2026 (REVOLUCION TECNICA)</a></h2>
-<p>La ingenieria en la maxima categoria ha evolucionado enormemente hacia el concepto "Nimble Car" (Auto Agil). 
-En 2026, los autos seran 10cm mas estrechos y 20cm mas cortos para mejorar la maniobrabilidad en circuitos callejeros. 
-La tendencia hacia motores con un 50% de potencia electrica y combustibles 100% sostenibles sigue creciendo con la entrada de Audi y Ford. 
-Por otro lado, la aerodinamica activa permitira alerones moviles que cambiaran su posicion segun si el auto esta en una recta o una curva, 
-abriendo posibilidades para sobrepasos mucho mas limpios. La seguridad se ha convertido en un aspecto crucial, con nuevas regulaciones 
-de la FIA estableciendo estandares mas estrictos para el chasis. Para los equipos nuevos, la curva de aprendizaje puede parecer abrumadora, 
-pero la expectativa por ver a Franco Colapinto peleando por un asiento fijo nunca ha sido mas alta y los recursos tecnologicos mas abundantes.</p>
-</div>
-</body>
+    <head>
+        <title>Telemetricos Tv - F1 Report</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">REPORTE F1: CIERRE TEMPORADA 2025 Y NUEVA ERA 2026</a></h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for publicacion in publicaciones %}
+                        <div class="post">
+                            <p class="date">publicado: {{ publicacion.fecha_publicacion }}</p>
+                            <h2><a href="">{{ publicacion.titulo }}</a></h2>
+                            <p>{{ publicacion.texto|linebreaksbr }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
