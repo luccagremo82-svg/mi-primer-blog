@@ -34,7 +34,7 @@ def editar_public(request, pk):
             pub.save()
             return redirect('lista_public')
     else:
-        form = FormComentario() # Ojo: acá debe decir FormPublicacion(instance=pub)
+        form = FormComentario() 
         form = FormPublicacion(instance=pub)
     return render(request, 'blog/editar_public.html', {'form': form})
 
