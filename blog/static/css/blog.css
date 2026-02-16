@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:ital,wght@0,400;1,700&display=swap');
 
+/* 1. RESETEO CLAVE: Esto borra el espacio blanco de los costados */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #15151e;
+}
+
 .page-header {
     background-color: #e10600; 
-    margin-top: 0;
-    padding: 30px 20px 30px 40px;
-    border-bottom: 8px solid #1a1a1a; 
+    margin: 0; /* Cambiado a 0 para que pegue al borde */
+    padding: 20px 20px 20px 40px;
+    border-bottom: 5px solid #1a1a1a; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -18,11 +27,25 @@
     text-shadow: 2px 2px 0px #1a1a1a;
 }
 
+/* 2. EL FONDO QUE CAMBIA: Usamos una clase especial para formularios */
 .content {
-    margin-left: 0; 
     padding: 20px;
     background-color: #15151e; 
     min-height: 100vh;
+}
+
+/* Si el contenedor tiene la clase 'form-container', el fondo será blanco */
+.form-container {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Estilo para que los textos de edición se vean bien en fondo blanco */
+.form-container h2, .form-container label {
+    color: #1a1a1a;
 }
 
 h1, h2, h3, h4 {
@@ -40,10 +63,10 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 25px;
+    margin-bottom: 70px;
+    margin-left: 20px; /* Reduje un poco para que no choque */
+    margin-right: 20px;
+    padding: 20px;
     border-left: 10px solid #e10600; 
     background-color: #1f1f27; 
     border-radius: 0 15px 15px 0;
@@ -73,9 +96,8 @@ h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
 }
 
-
 .save, .btn-f1 {
-    background-color: #e10600; /* botones (Save/Login) */ 
+    background-color: #e10600; 
     color: white;
     border: none;
     padding: 10px 20px;
