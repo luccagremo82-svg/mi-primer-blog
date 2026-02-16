@@ -1,8 +1,8 @@
 {% load static %}
 <html>
 <head>
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <title>Telemetricos Tv - F1 Report</title>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -12,16 +12,15 @@
         <h1><a href="/">Telemetricos Tv - F1 Report</a></h1>
     </div>
 
- {% extends 'blog/base.html' %}     
- {% block content %}
-    
-    <div class="content container"><h2>Nueva Publicación</h2>
-        <form method="POST" class="post-form">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Guardar</button>
-        </form>
+    <div class="content">
+        <div class="form-container">
+            <h2>Nueva Publicación</h2>
+            <form method="POST" class="post-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn-f1">Guardar</button>
+            </form>
+        </div>
     </div>
- 
- {% endblock %}
 </body>
 </html>
