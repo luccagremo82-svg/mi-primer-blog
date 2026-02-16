@@ -19,3 +19,13 @@ class Publicacion(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class Comentario(models.Model):
+    publicacion = models.ForeignKey('blog.Publicacion', on_delete=models.CASCADE, related_name='comentarios')
+    autor = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    texto = models.TextField()
+    fecha_creacion = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.texto

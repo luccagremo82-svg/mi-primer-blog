@@ -9,7 +9,19 @@
     </head>
     <body>
         <div class="page-header">
+            <a href="{% url 'nueva_public' %}" class="top-menu">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+
             <h1><a href="/">REPORTE F1: TELEMETRICOS TV</a></h1>
+
+            <div class="user-info">
+                {% if usuarioActivo.is_authenticated %}
+                    <p>Bienvenido, <strong>{{ usuarioActivo.username }}</strong></p>
+                {% else %}
+                    <p>No ha iniciado sesión. <a href="{% url 'admin:index' %}">Iniciar Sesión</a></p>
+                {% endif %}
+            </div>
         </div>
 
         <div class="content container">
@@ -20,9 +32,20 @@
                             <div class="date">
                                 <p>publicado: {{ publicacion.fecha_publicacion }}</p>
                             </div>
-                            <h2><a href="">{{ publicacion.titulo }}</a></h2>
+                            
+                            <h2>
+                                <a href="">{{ publicacion.titulo }}</a>
+                                
+                                {% if usuarioActivo.id == publicacion.autor.id %}
+                                    <a class="btn btn-default" href="{% url 'editar_public' pk=publicacion.pk %}">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a>
+                                {% endif %}
+                            </h2>
+
                             <p>{{ publicacion.texto|linebreaksbr }}</p>
                         </div>
+                        <hr>
                     {% endfor %}
                 </div>
             </div>
